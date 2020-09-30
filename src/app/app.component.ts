@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     parent.postMessage('ais-progress', '*');
   }
 
-  finish(): void {
+  continue(): void {
     parent.postMessage('ais-exit', '*');
   }
 

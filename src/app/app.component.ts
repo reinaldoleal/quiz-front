@@ -23,11 +23,16 @@ export class AppComponent implements OnInit {
 
   next(): void {
     this.indexQuestion++;
-    parent.postMessage('ais-progress', '*');
+    parent.postMessage({type: 'ais-exit', direction: 'FORWARD', url: 'ais.exit.url'}, '*');
+  }
+
+  prior(): void {
+    this.indexQuestion--;
+    parent.postMessage({type: 'ais-exit', direction: 'BACK', url: 'ais.exit.back.url'}, '*');
   }
 
   continue(): void {
-    parent.postMessage('ais-exit', '*');
+    parent.postMessage({type: 'ais-exit', direction: 'CLOSE', url: 'ais.exit.close.url'}, '*');
   }
 
   onLinkClick(event: MatTabChangeEvent): void {

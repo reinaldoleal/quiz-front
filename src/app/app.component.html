@@ -25,6 +25,9 @@
           <input matInput [(ngModel)]="questions[1].answer" name="question2" />
         </mat-form-field>
       </form>
+      <button mat-raised-button (click)="prior()" color="primary">
+        Back
+      </button>
       <button mat-raised-button (click)="next()" color="primary">
         Next
       </button>
@@ -36,6 +39,9 @@
           <input matInput [(ngModel)]="questions[2].answer" name="question3" />
         </mat-form-field>
       </form>
+      <button mat-raised-button (click)="prior()" color="primary">
+        Back
+      </button>
       <button mat-raised-button (click)="continue()" color="primary">
         Continue
       </button>
